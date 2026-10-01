@@ -1,0 +1,312 @@
+{
+  "mode": "demo",
+  "engine_requested": "native",
+  "transport": "local",
+  "cases": 12,
+  "completed": 12,
+  "checks_passed": 12,
+  "strategy_matches": 12,
+  "results": [
+    {
+      "case": "default_momentum",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.2600027130001763,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "moving_average_question",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.15131760099984604,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "buy_hold_question",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "buy_hold",
+      "selected_strategy": "buy_hold",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.17479367800024193,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "explicit_overrides_question",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.16850129800013747,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "weekly_momentum",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.1599454219999643,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "daily_momentum",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.3738406600000417,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "higher_cost_sma",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.18363724199980425,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "longer_history",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.3505238759998974,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "shorter_windows",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.13067514300018956,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "nonzero_hurdle",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "buy_hold",
+      "selected_strategy": "buy_hold",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.20042678299978434,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "explicit_sma",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.18258432099992206,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    },
+    {
+      "case": "single_asset_baseline",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "buy_hold",
+      "selected_strategy": "buy_hold",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 0.27214406499979304,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "local",
+        "mcp_implementation": null
+      }
+    }
+  ],
+  "caveat": "Demo cases evaluate deterministic orchestration, not language-model performance. LLM mode incurs provider calls and is a separate evaluation."
+}

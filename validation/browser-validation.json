@@ -1,0 +1,18 @@
+{
+  "browser": "System Chromium with Playwright",
+  "transport_test": "DOM uses a fetch bridge to the real FastAPI TestClient; browser localhost navigation is blocked by environment policy.",
+  "desktop_viewport": "1440x1100",
+  "mobile_viewport": "390x844",
+  "form_submission": "passed",
+  "completed_run": "passed",
+  "checks_displayed": 8,
+  "equity_chart_series": 2,
+  "download_links": 5,
+  "exports": "passed",
+  "mobile_horizontal_overflow": false,
+  "page_errors": [],
+  "engine": "native",
+  "tool_transport": "mcp",
+  "agent_mode": "demo",
+  "data": "synthetic"
+}

@@ -1,0 +1,23 @@
+# Optional: docker compose -f compose.yaml -f compose.postgres.yaml up --build
+services:
+  app:
+    environment:
+      DATABASE_URL: postgresql+psycopg2://quant:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/quant
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: quant
+      POSTGRES_DB: quant
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U quant -d quant"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  postgres-data:

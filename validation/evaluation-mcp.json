@@ -1,0 +1,313 @@
+{
+  "mode": "demo",
+  "engine_requested": "native",
+  "transport": "mcp",
+  "cases": 12,
+  "completed": 12,
+  "checks_passed": 12,
+  "strategy_matches": 12,
+  "caveat": "Demo cases evaluate deterministic orchestration, not language-model performance. LLM mode incurs provider calls and is a separate evaluation.",
+  "results": [
+    {
+      "case": "default_momentum",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 4.002536388999943,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "moving_average_question",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 3.094749786999728,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "buy_hold_question",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "buy_hold",
+      "selected_strategy": "buy_hold",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 2.7882498369999666,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "explicit_overrides_question",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 3.2330017360000056,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "weekly_momentum",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 3.425503252999988,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "daily_momentum",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 2.721463096000207,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "higher_cost_sma",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 3.0370952349999243,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "longer_history",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 3.509832085999733,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "shorter_windows",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "momentum",
+      "selected_strategy": "momentum",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 3.476084742000239,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "nonzero_hurdle",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "buy_hold",
+      "selected_strategy": "buy_hold",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 2.8778092590000597,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "explicit_sma",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "sma_cross",
+      "selected_strategy": "sma_cross",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 2.781697195999641,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    },
+    {
+      "case": "single_asset_baseline",
+      "completed": true,
+      "checks_passed": true,
+      "expected_strategy": "buy_hold",
+      "selected_strategy": "buy_hold",
+      "strategy_match": true,
+      "telemetry": {
+        "elapsed_seconds": 2.6486840649999976,
+        "tool_calls": 6,
+        "tool_failures": 0,
+        "invalid_model_calls": 0,
+        "revision_count": 0,
+        "llm_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 0,
+          "http_attempts": 0
+        },
+        "estimated_llm_cost_usd": 0.0,
+        "agent_mode": "demo",
+        "tool_transport": "mcp",
+        "mcp_implementation": "builtin"
+      }
+    }
+  ],
+  "execution_note": "Executed in three four-case batches because this build environment imposes short command-execution limits."
+}

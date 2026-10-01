@@ -1,0 +1,14 @@
+[
+  {"name":"default_momentum","request":{"query":"Test momentum in AAPL and MSFT"},"expected_strategy":"momentum"},
+  {"name":"moving_average_question","request":{"query":"Research a moving average crossover","symbols":["NVDA"],"benchmark":"QQQ"},"expected_strategy":"sma_cross"},
+  {"name":"buy_hold_question","request":{"query":"Compare buy-and-hold with SPY","symbols":["AAPL","JPM"]},"expected_strategy":"buy_hold"},
+  {"name":"explicit_overrides_question","request":{"query":"This mentions momentum but obey the selected strategy","strategy":"sma_cross"},"expected_strategy":"sma_cross"},
+  {"name":"weekly_momentum","request":{"query":"Momentum with weekly rebalancing","symbols":["JPM"],"rebalance":"weekly"},"expected_strategy":"momentum"},
+  {"name":"daily_momentum","request":{"query":"Momentum with daily rebalancing","symbols":["NVDA","MSFT"],"rebalance":"daily"},"expected_strategy":"momentum"},
+  {"name":"higher_cost_sma","request":{"query":"Moving average crossover under higher trading costs","commission_bps":15,"slippage_bps":20},"expected_strategy":"sma_cross"},
+  {"name":"longer_history","request":{"query":"Test momentum across a longer synthetic history","start":"2018-01-01","end":"2026-01-01","symbols":["AAPL","MSFT","NVDA","JPM"]},"expected_strategy":"momentum"},
+  {"name":"shorter_windows","request":{"query":"Momentum at a shorter fixed lookback","lookback":20,"start":"2023-01-01","end":"2025-01-01"},"expected_strategy":"momentum"},
+  {"name":"nonzero_hurdle","request":{"query":"Buy and hold with a positive Sharpe hurdle","annual_risk_free_rate":0.04},"expected_strategy":"buy_hold"},
+  {"name":"explicit_sma","request":{"query":"Compare portfolio performance","strategy":"sma_cross","fast_window":10,"slow_window":40},"expected_strategy":"sma_cross"},
+  {"name":"single_asset_baseline","request":{"query":"Reference buy-and-hold portfolio","symbols":["SPY"],"benchmark":"SPY","commission_bps":0,"slippage_bps":0},"expected_strategy":"buy_hold"}
+]

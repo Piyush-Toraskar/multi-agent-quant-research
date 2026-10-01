@@ -1,0 +1,7 @@
+-r requirements-core.txt
+# Optional integrations used when explicitly enabled or available.
+langgraph>=1.0.3,<2
+# Official adapter targets the maintained v1 API. The built-in MCP path needs no SDK.
+mcp>=1.28,<2
+yfinance>=0.2.66,<2
+psycopg2-binary>=2.9,<3

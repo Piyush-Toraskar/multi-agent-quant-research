@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8001:8000"
+    env_file:
+      - .env
+    environment:
+      DATA_DIR: /workspace/data/runtime
+    volumes:
+      - quant-data:/workspace/data/runtime
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  quant-data:

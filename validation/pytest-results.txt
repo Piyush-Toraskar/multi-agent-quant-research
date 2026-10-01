@@ -1,0 +1,6 @@
+..................................s..................................... [ 82%]
+............s..                                                          [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_mcp.py:51: Official MCP SDK is not installed in this test environment
+SKIPPED [1] tests/test_workflow.py:44: LangGraph is not installed in this test environment
+85 passed, 2 skipped in 12.81s

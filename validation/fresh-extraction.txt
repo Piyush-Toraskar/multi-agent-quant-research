@@ -1,0 +1,56 @@
+Fresh extraction of deliverable ZIP. Verified 105 manifest hashes.
+
+$ python -m scripts.doctor
+Python: 3.13.5
+Interpreter: /opt/pyvenv/bin/python
+Project: /tmp/quant-fresh-3q3noqio/multi-agent-quant-research
+numpy                    2.3.5            OK
+pandas                   2.2.3            OK
+fastapi                  0.128.2          OK
+uvicorn                  0.48.0           OK
+SQLAlchemy               2.0.50           OK
+pydantic                 2.13.4           OK
+pydantic-settings        2.14.1           OK
+python-dotenv            1.2.2            OK
+httpx                    0.28.1           OK
+
+All checked requirements are satisfied. Nothing was installed or upgraded.
+
+Optional modules:
+  langgraph not installed
+  mcp not installed
+  yfinance not installed
+  psycopg2 not installed
+  pytest available
+
+Start from the project root: python -m app
+
+Exit: 0
+
+$ python -m scripts.demo --engine native
+Run: 5840cccb6c4842d48afa017031d5ff4d
+Source: Deterministic synthetic fixture; NOT historical market prices
+Engine: native | Tool transport: mcp
+Critic checks: PASSED
+Report: /tmp/quant-fresh-3q3noqio/multi-agent-quant-research/data/runtime/demo_report.md
+{
+  "elapsed_seconds": 3.79766508900002,
+  "tool_calls": 6,
+  "tool_failures": 0,
+  "invalid_model_calls": 0,
+  "revision_count": 0,
+  "llm_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 0,
+    "http_attempts": 0
+  },
+  "estimated_llm_cost_usd": 0.0,
+  "agent_mode": "demo",
+  "tool_transport": "mcp",
+  "mcp_implementation": "builtin"
+}
+
+Exit: 0
+
+Report created successfully (4639 bytes). No packages installed.

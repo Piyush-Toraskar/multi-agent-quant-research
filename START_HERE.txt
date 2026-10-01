@@ -1,0 +1,22 @@
+MULTI-AGENT QUANT RESEARCH - START HERE
+
+1. Open PowerShell in the folder that contains app/, scripts/ and README.md.
+2. Run: python -m scripts.doctor
+   This only checks the current interpreter. It installs nothing by default.
+3. When the core check passes, run: python -m app
+4. Open: http://127.0.0.1:8000
+5. Click Run research. Stop the server with Ctrl+C.
+
+Default: full synthetic-data pipeline; no API key and no LLM inference.
+Real MCP subprocess calls are enabled. LangGraph is used when installed;
+otherwise the application explicitly identifies its native workflow.
+
+To install only unsatisfied core requirements after reviewing them:
+  python -m scripts.doctor --install
+
+To run the complete experiment without a browser:
+  python -m scripts.demo
+
+LLM mode, live data, PostgreSQL and Docker instructions are in README.md.
+Actual tests and unverified integrations are recorded in validation/VALIDATION.md.
+Do not confuse synthetic strategy metrics with real investment performance.

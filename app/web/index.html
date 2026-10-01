@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quant Research | Multi-Agent Platform</title><link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<header><a class="wordmark" href="/">QUANT / RESEARCH</a><span class="header-note">A reproducible agent research workbench</span><a href="/docs" target="_blank" rel="noopener">API reference</a></header>
+<main>
+<section class="intro"><div><p class="eyebrow">MULTI-AGENT RESEARCH PLATFORM</p><h1>From a hypothesis<br>to an auditable experiment.</h1><p class="lead">Plan, retrieve, analyse, backtest and verify. Every calculation has a traceable input.</p></div><div class="runtime"><span class="label">RUNTIME</span><strong id="runtime">Connecting...</strong><small id="runtime-detail"></small></div></section>
+<div class="notice" id="mode-notice">Loading runtime configuration...</div>
+<div class="workspace">
+<aside>
+<section class="panel"><div class="section-title"><span class="step">01</span><h2>Design the experiment</h2></div>
+<form id="research-form">
+<label for="query">Research question</label><textarea id="query" rows="3" required minlength="5" maxlength="2500">Test momentum on AAPL and MSFT against SPY.</textarea>
+<p class="hint">Fields below are authoritative. In demo mode the question selects only a supported strategy; it does not parse dates or tickers.</p>
+<div class="two"><div><label for="symbols">Symbols, comma-separated</label><input id="symbols" value="AAPL, MSFT" required></div><div><label for="benchmark">Benchmark</label><input id="benchmark" value="SPY" required></div></div>
+<label for="provider">Data source</label><select id="provider"><option value="demo">Synthetic demo (offline)</option><option value="yfinance">Yahoo Finance (internet required)</option></select>
+<p class="hint">Demo symbols: AAPL, MSFT, NVDA, JPM, SPY, QQQ. Demo dates: 2018-01-01 to 2026-01-01, end exclusive. Live symbols must share a currency and comparable session.</p>
+<div class="two"><div><label for="start">Start (inclusive)</label><input type="date" id="start" value="2021-01-01" required></div><div><label for="end">End (exclusive)</label><input type="date" id="end" value="2025-01-01" required></div></div>
+<div class="two"><div><label for="strategy">Strategy</label><select id="strategy"><option value="auto">Select from question</option><option value="momentum">Positive momentum</option><option value="sma_cross">SMA crossover</option><option value="buy_hold">Buy and hold</option></select></div><div><label for="rebalance">Rebalance</label><select id="rebalance"><option value="monthly">Monthly</option><option value="weekly">Weekly</option><option value="daily">Daily</option></select></div></div>
+<details><summary>Parameters and assumptions</summary>
+<div class="two"><div><label for="lookback">Momentum lookback</label><input id="lookback" type="number" value="60" min="2" max="252"></div><div><label for="capital">Initial capital</label><input id="capital" type="number" value="100000" min="100"></div></div>
+<div class="two"><div><label for="fast">Fast SMA</label><input id="fast" type="number" value="20" min="2" max="200"></div><div><label for="slow">Slow SMA</label><input id="slow" type="number" value="80" min="3" max="300"></div></div>
+<div class="two"><div><label for="commission">Commission (bps)</label><input id="commission" type="number" value="5" min="0" max="100" step="0.1"></div><div><label for="slippage">Slippage (bps)</label><input id="slippage" type="number" value="5" min="0" max="100" step="0.1"></div></div>
+<div class="two"><div><label for="holdout">Holdout fraction</label><input id="holdout" type="number" value="0.3" min="0.2" max="0.5" step="0.05"></div><div><label for="riskfree">Risk-free hurdle</label><input id="riskfree" type="number" value="0" min="0" max="0.25" step="0.01"></div></div>
+<p class="hint">Long-only. Zero-yield cash. Signals trade at the next close, never their own close. Buy-and-hold ignores the rebalance selection.</p>
+</details><button id="run-button" type="submit">Run research <span aria-hidden="true">&rarr;</span></button><p id="form-error" class="error" role="alert"></p>
+</form></section>
+<section class="panel history"><div class="section-title"><span class="step">02</span><h2>Research history</h2></div><div id="history">No runs yet.</div></section>
+</aside>
+<div class="results">
+<section class="panel"><div class="section-title"><span class="step">03</span><h2>Live execution</h2><span id="status" class="badge">READY</span></div><div id="pipeline" class="pipeline"><span>Planner</span><span>Data</span><span>Quant</span><span>Risk</span><span>Critic</span><span>Report</span></div><pre id="events" class="events" aria-live="polite">Submit an experiment to inspect agent actions and tool calls.</pre><p id="run-error" class="error" role="alert"></p></section>
+<div id="empty" class="empty"><p class="eyebrow">START WITH THE BUILT-IN DEMO</p><h2>Research you can inspect.</h2><p>The offline demo runs the whole calculation pipeline, including subprocess MCP tool calls. It uses deterministic policies, not LLM inference.</p><p>Enable LLM mode in <code>.env</code> to let model-driven agents issue constrained tool calls.</p></div>
+<div id="completed" hidden>
+<section class="panel"><div class="section-title"><h2>Measured results</h2><span id="source-badge" class="badge"></span></div><div id="metric-cards" class="metric-cards"></div><p class="hint" id="run-meta"></p><div class="chart-legend"><span class="legend-solid">Strategy</span><span class="legend-dashed">Benchmark</span></div><svg id="equity-chart" viewBox="0 0 760 260" role="img" aria-label="Strategy and benchmark equity over time"></svg><p class="hint">Both lines include trading costs and share the initial entry date. Dashed line = benchmark.</p></section>
+<section class="panel"><h2>Holdout and asset comparison</h2><div class="table-scroll"><table id="performance-table"></table></div><h3>Daily-return correlations</h3><div class="table-scroll"><table id="correlation-table"></table></div><p class="hint">Correlation values are printed numerically; colour is not required to interpret the table.</p></section>
+<section class="panel"><h2>Critic checks</h2><div id="checks" class="checks"></div><p class="hint">Passing engineering checks is not proof of an investment edge or of freedom from every possible bias.</p></section>
+<section class="panel"><div class="section-title"><h2>Report and provenance</h2><button id="replay" class="secondary" type="button">Replay exact data</button></div><div id="downloads" class="downloads"></div><pre id="report" class="report"></pre></section>
+</div>
+</div></div>
+<footer>Educational research only. No brokerage connection, live orders, arbitrary code execution or unrestricted SQL. Synthetic results are not investment evidence.</footer>
+</main></body></html>

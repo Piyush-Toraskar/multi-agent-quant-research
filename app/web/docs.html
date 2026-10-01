@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quant Research API</title><link rel="stylesheet" href="/static/style.css"></head><body><header><a class="wordmark" href="/">QUANT / RESEARCH</a><a href="/openapi.json">OpenAPI JSON</a></header><main class="docs"><p class="eyebrow">LOCAL REST API</p><h1>API reference</h1><p>The interface and these docs require no CDN or internet. All requests below are relative to http://127.0.0.1:8000.</p><h2>Submit research</h2><pre>POST /api/research
+Content-Type: application/json
+
+{
+  "query": "Test momentum on AAPL and MSFT against SPY.",
+  "symbols": ["AAPL", "MSFT"],
+  "benchmark": "SPY",
+  "start": "2021-01-01",
+  "end": "2025-01-01",
+  "provider": "demo",
+  "strategy": "momentum"
+}
+
+202 response: {"id": "&lt;run-id&gt;", "status": "queued"}</pre><h2>Read and export</h2><pre>GET  /api/health
+GET  /api/research?query=momentum&amp;limit=20
+GET  /api/research/{id}
+GET  /api/research/{id}/events?after=0
+GET  /api/research/{id}/report
+GET  /api/research/{id}/export/json
+GET  /api/research/{id}/export/curve
+GET  /api/research/{id}/export/trades
+GET  /api/research/{id}/export/snapshot
+POST /api/research/{id}/replay</pre><p>Run states: queued, running, completed, rejected, failed, interrupted. A rejected run has a report whose engineering checks failed. Replay fixes the strategy and reuses the original content-addressed price snapshot.</p><p>The OpenAPI JSON includes every request field, bound, enum and response schema. Error 422 means invalid input; 429 means the local queue is full; 409 means results are not ready; 404 means an unknown resource.</p><h2>Security boundary</h2><p>This is a local single-user research application, not a hosted multi-user service. Do not expose the port publicly. There is no authentication, broker connection, arbitrary code tool or unrestricted SQL endpoint. The queue is bounded and in-process; restart marks unfinished runs interrupted.</p><footer><a href="/">Back to research workbench</a></footer></main></body></html>
